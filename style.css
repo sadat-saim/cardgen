@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("bg.png") center no-repeat;
+}
+
+h1 {
+    color: #ccc;
+}
+
+.ul-wrapper {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    width: 200px;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+ul::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.fill {
+    width: 0%;
+    height: 5px;
+    background-color: rgb(128, 211, 226);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    transition: width 0.3s ease;
+}
+
+ul li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid #ccc;
+    background-color: #fff;
+    font-size: 0.9rem;
+    z-index: 55;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li.active {
+    border-color: rgb(128, 211, 226);
+}
+
+.one,
+.two,
+.three,
+.four {
+    width: 100%;
+    height: 100%;
+    margin-right: 5px;
+}
+
+input {
+    width: 245px;
+    height: 35px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border: 3px solid rgb(128, 211, 226);
+}
+
+.wrapper-container {
+    transition: scroll 2s ease;
+}
+
+.wrapper {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+    transition: scroll 2s ease;
+}
+
+.wrapper::-webkit-scrollbar {
+    appearance: none;
+}
+
+button {
+    padding: 8px 25px;
+    outline: none;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(128, 211, 226);
+}
+
+button:disabled:hover {
+    background-color: #ccc;
+}

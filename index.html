@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>CardGen</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CardGen</h1>
+        <form>
+            <div class="ul-wrapper">
+                <ul id="numbers" class="num">
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <div id="fill" class="fill"></div>
+                </ul>
+
+            </div>
+
+            <div id="wrappers" class="wrapper">
+
+                <div class="one slides">
+                    <input type="text" id="fName" placeholder="First Name">
+                    <input type="text" id="lName" placeholder="Last Name">
+                </div>
+                <div class="two slides">
+                    <input type="text" id="mobile" placeholder="Mobile">
+                    <input type="email" id="email" placeholder="Email">
+                    <input type="text" id="website" placeholder="Website">
+                </div>
+                <div class="three slides">
+                    <input type="text" id="company" placeholder="Company Name">
+                    <input type="text" id="rank" placeholder="Rank">
+                    <input type="text" id="adress" placeholder="Adress">
+                </div>
+                <div class="four slides">
+                    <input type="text" style="visibility:hidden" placeholder="Adress">
+                    <button id="generate" type="submit">Generate</button>
+                </div>
+            </div>
+
+
+
+
+        </form>
+        <button type="submit" id="prev" disabled>Prev</button>
+        <button type="submit" id="next">Next</button>
+
+
+    </div>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="Courgette-Regular-normal.js" type="module"></script>
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
